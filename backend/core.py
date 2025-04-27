@@ -31,10 +31,18 @@ def run_llm(query: str):
     )
 
     result = qa.invoke(input = {"input": query})
-    return result
+    new_result = {
+        "query": result["input"],
+        "result": result["answer"],
+        "source_documents": result["context"]
+    }
+    return new_result
 
 
 
 if __name__ == "__main__":
-    res = run_llm("What is a Lanchain chain?")
-    print(res["answer"])
+    res = run_llm("What can I use image recognition in a chain of langchain?")
+    print(res["result"])
+    for doc in res["source_documents"]:
+        print(doc.metadata["source"])
+        

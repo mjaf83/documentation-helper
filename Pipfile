@@ -14,7 +14,6 @@ nltk = "*"
 fastapi = "*"
 jinja2 = "*"
 uvicorn = "*"
-streamlit = "*"
 streamlit-chat = "*"
 tqdm = "*"
 langchain-pinecone = "*"
@@ -24,6 +23,7 @@ langchain-ollama = "*"
 langchain-community = "*"
 langchainhub = "*"
 faiss-cpu = "*"
+streamlit = "*"
 
 [dev-packages]
 
